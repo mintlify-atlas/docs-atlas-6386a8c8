@@ -1,0 +1,124 @@
+{
+  "projectType": "saas",
+  "projectName": "Errbit",
+  "projectDescription": "Self-hosted error tracking and monitoring application that's Airbrake API compliant",
+  "theme": "aspen",
+  "primaryColor": "#E74C3C",
+  "lightColor": "#EC7063",
+  "darkColor": "#C0392B",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Installation & Deployment",
+            "pages": [
+              "installation/requirements",
+              "installation/configuration",
+              "deployment/overview",
+              "deployment/docker",
+              "deployment/heroku",
+              "deployment/dokku",
+              "deployment/kubernetes"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/apps",
+              "features/problems",
+              "features/notices",
+              "features/issue-trackers",
+              "features/notifications"
+            ]
+          },
+          {
+            "group": "Authentication",
+            "pages": [
+              "authentication/overview",
+              "authentication/github",
+              "authentication/google",
+              "authentication/ldap"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/airbrake-clients",
+              "integrations/javascript",
+              "integrations/other-languages",
+              "integrations/notification-services"
+            ]
+          },
+          {
+            "group": "Maintenance",
+            "pages": [
+              "maintenance/upgrading",
+              "maintenance/troubleshooting"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "api/introduction",
+              "api/authentication"
+            ]
+          },
+          {
+            "group": "Airbrake Compatible API",
+            "pages": [
+              "api/airbrake/notices"
+            ]
+          },
+          {
+            "group": "REST API v1",
+            "pages": [
+              "api/v1/problems",
+              "api/v1/notices",
+              "api/v1/comments",
+              "api/v1/stats"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Self-hosted error tracking and monitoring",
+    "Airbrake API compatible for easy integration",
+    "Error grouping and fingerprinting",
+    "Issue tracker integration (GitHub, Bitbucket, JIRA)",
+    "Multiple notification services (Slack, Email, Webhook, Campfire)",
+    "OAuth authentication (GitHub, Google, LDAP)",
+    "Multi-app and multi-environment support",
+    "Error statistics and analytics",
+    "User and watcher management",
+    "Docker and Kubernetes deployment ready"
+  ],
+  "publicApiSurface": [
+    "POST /notifier_api/v2/notices - Create error notice (Airbrake compatible)",
+    "POST /api/v3/projects/:project_id/notices - Create error notice (v3)",
+    "GET /api/v1/problems - List problems",
+    "GET /api/v1/problems/:id - Get problem details",
+    "GET /api/v1/notices - List notices",
+    "POST /api/v1/problems/:problem_id/comments - Create comment",
+    "GET /api/v1/problems/:problem_id/comments - List comments",
+    "GET /api/v1/stats/app - Get app statistics",
+    "GET /locate/:id - Locate notice by ID",
+    "POST /apps/:app_id/problems/:id/resolve - Resolve problem",
+    "POST /apps/:app_id/problems/:id/create_issue - Create issue in tracker"
+  ]
+}
